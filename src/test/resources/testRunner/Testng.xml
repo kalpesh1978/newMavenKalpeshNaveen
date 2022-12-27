@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test" parallel="tests" thread-count="3" verbose="3">
+
+  <test  name="Google Test">
+    <parameter name= "url" value= "https://www.google.co.uk/"/>
+    <parameter name= "browser" value= "chrome"/>
+  
+    <classes>
+    <class name="appTests.GoogleTest"/>
+    </classes>
+  </test> 
+     
+     <test name  = "OrangeHRM Test">
+         <parameter name= "url" value= "https://www.orangehrm.com/orangehrm-30-day-trial"/>
+         <parameter name= "browser" value= "chrome"/>
+         
+     
+       <classes>
+         <class name="appTests.OrangeHRMTest"/>
+       </classes>
+     </test>
+     
+          <test name  = " OpenCart Test ">
+           <parameter name= "url" value= "https://demo.opencart.com/index.php?route=account/login"/>
+                   <parameter name= "browser" value= "chrome"/>
+          
+          
+       <classes>
+         <class name="appTests.OpenCartTest"/>
+       </classes>
+     </test>
+     
+</suite> <!-- Suite -->
